@@ -1,7 +1,7 @@
-import { useState } from 'react'; // Importing useState hook from React
-import './App.css'; // Importing the CSS file for styling
-import AddPlanner from './components/AddPlanner'; // Importing AddPlanner component
-import PlannerList from './components/PlannerList'; // Importing PlannerList component
+import { useState } from 'react'; 
+import './App.css'; 
+import AddPlanner from './components/AddPlanner'; 
+import PlannerList from './components/PlannerList'; 
 
 function App() {
   // State to store the list of planners
@@ -9,8 +9,11 @@ function App() {
 
   // Function to add a new item to the planner list
   const addToList = (usertext, hours) => {
-    console.log(usertext, hours); // Logging the user input
+
+    console.log(usertext, hours); 
+    
     let newItem = { usertext, hours }; // Creating a new item object
+    
     setPlannerList([...plannerList, newItem]); // Updating the state with the new item
   }
 

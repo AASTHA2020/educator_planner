@@ -1,31 +1,27 @@
-import React, { useState } from 'react'; // Importing React and useState hook
+import React, { useState } from 'react'; 
 
-const PlannerItem = ({ listItem }) => {
-  // State to manage the time of each task item
+const PlannerItem = ({ listItem }) => 
+
   const [time, setTime] = useState(parseInt(listItem.hours));
 
-  // Function to increase time
-  const increaseTime = () => {
+   const increaseTime = () => {
     if (time >= 0) {
-      setTime(time + 1); // Incrementing the time
-    }
+      setTime(time + 1); 
   }
 
   // Function to decrease time
   const decreaseTime = () => {
     if (time > 0) {
-      setTime(time - 1); // Decrementing the time
-    }
+      setTime(time - 1);}
   }
 
   return (
     <div className='listItem'>
       {
-        console.log(listItem) // Logging the list item
-      }
+        console.log(listItem)  }
       <span>{listItem.usertext} -</span><span>Time: {time} hours</span>
-      <button onClick={increaseTime} style={{ backgroundColor: "#6b5ef5" }}>+</button> {/* Button to increase time */}
-      <button onClick={decreaseTime} style={{ backgroundColor: "grey" }}>-</button> {/* Button to decrease time */}
+      <button onClick={increaseTime} style={{ backgroundColor: "#6b5ef5" }}>+</button> 
+      <button onClick={decreaseTime} style={{ backgroundColor: "grey" }}>-</button> 
     </div>
   )
 }
