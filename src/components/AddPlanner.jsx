@@ -25,7 +25,7 @@ const AddPlanner = ({ addToList }) => {
 
   return (
     <div>
-      <h1>Geekster Education Planner</h1>
+      <h1>Geekster Educator Planner</h1>
       <div>
         <input type="text" value={usertext} id="task" onChange={handleUserText} /> 
         <input type="number" value={hours} onChange={handleHours} />
